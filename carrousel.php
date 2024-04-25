@@ -2,11 +2,12 @@
 
 /**
  * Plugin Name: Carrousel
- * Description: Affiche un carrousel d'image contrôlé par des boutons radio
- * Author : Mathieu Croteau-Dufour
- * version : 1.0.0
+ * Author: Mathieu Croteau-Dufour
+ * Description: Affiche le carrousel associé à une galerie de Wordpress
+ * Version: 1.0.0
+ * Plugin URI: https://github.com/mathcdu/Carrousel
+ * Author URI: 
  */
-
 function eddym_enqueue()
 {
 
@@ -30,16 +31,20 @@ function eddym_enqueue()
 }
 
 add_action('wp_enqueue_scripts', 'eddym_enqueue');
+/* IMPORTANT
+wp_header() juste avant la fermeture de la balise </head> dans header.php
+wp_footer() juste avant la fermeture de la balise </body> dans footer.php
+*/
 
 function genere_html()
 {
   /////////////////////////////////////// HTML
   // Le conteneur d'une boîte modale
-  $contenu = '<button class="bouton__ouvrir">Ouvrir</button>
+  $contenu = '
      <div class="carrousel">
-     <button class="carrousel__x">X</button>
-     <figure class="carrousel__figure"></figure>
-     <form class="carrousel__form"></form>
+      <button class="carrousel__x">X</button>
+      <figure class="carrousel__figure"></figure>
+      <form class="carrousel__form"></form>
      </div>';
   return $contenu;
 }
