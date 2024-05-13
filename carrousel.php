@@ -45,6 +45,8 @@ function genere_html()
       <button class="carrousel__x">X</button>
       <figure class="carrousel__figure"></figure>
       <form class="carrousel__form"></form>
+      <button class="carrousel__fleches carrousel__fleche-gauche">←</button>
+      <button class="carrousel__fleches carrousel__fleche-droite">→</button>
      </div>';
   return $contenu;
 }
