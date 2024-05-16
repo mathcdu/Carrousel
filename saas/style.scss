@@ -1,11 +1,11 @@
 .carrousel {
-  position: absolute;
+  position: fixed;
   transform: scale(0);
   transition: transform .25s;
   width: 50%;
   height: 50%;
-  top: 40%;
-  left: 25%;
+  top: 30%;
+  left: 30%;
   border: 3px solid #00f;
   background-color: rgba(0, 0, 0, .1);
   z-index: 2;
@@ -49,4 +49,36 @@
   justify-content: center;
   align-items: center;
   padding: 10px 0;
+}
+
+.carrousel__fleches {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carrousel__fleche-gauche {
+  left: 0;
+}
+
+.carrousel__fleche-droite {
+  right: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+  .carrousel {
+    width: 70%;
+    height: 70%;
+    left: 10%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .carrousel {
+    width: 80%;
+    height: 80%;
+    left: 10%;
+  }
+
 }

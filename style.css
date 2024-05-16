@@ -1,20 +1,18 @@
 .carrousel {
-  position: absolute;
-  transform: scale(0) translate(-50%, -50%);
+  position: fixed;
+  transform: scale(0);
   transition: transform 0.25s;
   width: 50%;
   height: 50%;
-  top: 50%;
-  left: 50%;
+  top: 30%;
+  left: 30%;
   border: 3px solid #00f;
   background-color: rgba(0, 0, 0, 0.1);
   z-index: 2;
-  max-width: 100vw;
-  max-height: 100vh;
 }
 
 .carrousel__x {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   padding: 3px 6px;
@@ -24,7 +22,6 @@
   z-index: 10;
 }
 
-
 .carrousel__figure {
   width: 100%;
   height: 100%;
@@ -33,17 +30,15 @@
 
 .carrousel__img {
   position: absolute;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   opacity: 1;
   transition: opacity 0.5s ease;
 }
 
 .carrousel--ouvrir {
-  transform: translate(-50%, -50%) scale(1);
+  transform: scale(1);
 }
 
 .carrousel__form {
@@ -60,16 +55,27 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.7);
-  border: none;
-  font-size: 2em;
-  padding: 10px;
 }
 
 .carrousel__fleche-gauche {
-  left: 10px;
+  left: 0;
 }
 
 .carrousel__fleche-droite {
-  right: 10px;
+  right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .carrousel {
+    width: 70%;
+    height: 70%;
+    left: 10%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .carrousel {
+    width: 80%;
+    height: 80%;
+    left: 10%;
+  }
 }
